@@ -5,11 +5,11 @@ import GlobalStyle from './src/utils/globalStyle'
 
 export const wrapRootElement = ({ element }) => {
   return (
-    <ThemeManagerProvider>
-      <>
+    <>
+      <ThemeManagerProvider>
         {element}
-        <GlobalStyle />
-      </>
-    </ThemeManagerProvider>
+      </ThemeManagerProvider>
+      <GlobalStyle />
+    </>
   )
 }

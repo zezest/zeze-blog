@@ -1,9 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
 import { withPrefix } from 'gatsby'
-import hex2rgba from 'hex2rgba'
-
-import { media } from 'utils/theme'
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -28,26 +25,7 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
-
-  html {
-    color: ${props => props.theme.text};
-    font-family: 'NanumSquare', 'Sans-serif';
-    font-weight: 400;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  body {
-    background-color: ${props => props.theme.main.bg};
-    transition: background-color 66ms ease;
-  }
-
-  h1, h2, h3, h4, b, strong {
-    color: ${props => props.theme.text};
-    font-weight: 700;
-  }
-
+  
   h1 {
     font-size: 1.925rem;
   }
@@ -70,12 +48,6 @@ const GlobalStyle = createGlobalStyle`
 
   h6 {
     font-size: 0.975rem;
-  }
-
-  p,
-  li {
-    color: ${props => hex2rgba(props.theme.text, 0.9)};
-    word-break: break-word;
   }
 
   a {
@@ -109,12 +81,6 @@ const GlobalStyle = createGlobalStyle`
   input[type=search]::-webkit-search-results-button,
   input[type=search]::-webkit-search-results-decoration {
     -webkit-appearance: none;
-  }
-  
-  ${media.lessThan('xsmall')} {
-    html {
-      font-size: 100%;
-    }
   }
 `
 

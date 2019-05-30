@@ -10,12 +10,12 @@ export const onClientEntry = async () => {
 
 export const wrapRootElement = ({ element }) => {
   return (
-    <ThemeManagerProvider>
-      <>
+    <>
+      <ThemeManagerProvider>
         {element}
-        <GlobalStyle />
-      </>
-    </ThemeManagerProvider>
+      </ThemeManagerProvider>
+      <GlobalStyle />
+    </>
   )
 }
 
