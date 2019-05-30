@@ -3,7 +3,7 @@ import hex2rgba from 'hex2rgba'
 
 import { media } from 'utils/theme'
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   html {
     color: ${props => props.theme.text};
     font-family: 'NanumSquare', 'Sans-serif';
