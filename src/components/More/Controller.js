@@ -5,8 +5,8 @@ export default PanelComponent => {
   const indexName = process.env.NODE_ENV === 'production' ? 'prod_BLOG' : 'dev_BLOG'
 
   const client = algoliasearch(
-    'LX9K5UR5A1',
-    '5b94fd00f67dceb8c1be5c5003ace9c4',
+    process.env.ALGOLIA_APP_ID,
+    process.env.ALGOLIA_ADMIN_KEY,
   )
   
   const index = client.initIndex(indexName)
